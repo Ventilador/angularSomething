@@ -1,0 +1,134 @@
+.myButton {
+  -moz-box-shadow: inset 0 1px 0 0 #9acc85;
+  -webkit-box-shadow: inset 0 1px 0 0 #9acc85;
+  box-shadow: inset 0 1px 0 0 #9acc85;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #74ad5a), color-stop(1, #68a54b));
+  background: -moz-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+  background: -webkit-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+  background: -o-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+  background: -ms-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+  background: linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#74ad5a', endColorstr='#68a54b',GradientType=0);
+  background-color: #74ad5a;
+  border: 1px solid #3b6e22;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+.myButton:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #68a54b), color-stop(1, #74ad5a));
+  background: -moz-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+  background: -webkit-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+  background: -o-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+  background: -ms-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+  background: linear-gradient(to bottom, #68a54b 5%, #74ad5a 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#68a54b', endColorstr='#74ad5a',GradientType=0);
+  background-color: #68a54b;
+}
+
+.myButton:active {
+  position: relative;
+  top: 1px;
+}
+
+.botones {
+  float: left;
+  margin-left: 10px;
+  margin-top: 10px;
+  max-width: 40vw;
+}
+
+.botones.run {
+  position: absolute;
+  top: 10px;
+  display: flex;
+  min-width: 100vw;
+}
+
+.botones.run button {
+  margin-right: 55vw;
+}
+
+.tests {
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.estado {
+  position: absolute;
+  top: 20px;
+  display: flex;
+  min-width: 100vw;
+  z-index: -1;
+}
+
+.estado span {
+  margin: auto;
+}
+
+.link-item button {
+  -moz-box-shadow: inset 0 1px 0 0 #7a8eb9;
+  -webkit-box-shadow: inset 0 1px 0 0 #7a8eb9;
+  box-shadow: inset 0 1px 0 0 #7a8eb9;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #637aad), color-stop(1, #5972a7));
+  background: -moz-linear-gradient(top, #637aad 5%, #5972a7 100%);
+  background: -webkit-linear-gradient(top, #637aad 5%, #5972a7 100%);
+  background: -o-linear-gradient(top, #637aad 5%, #5972a7 100%);
+  background: -ms-linear-gradient(top, #637aad 5%, #5972a7 100%);
+  background: linear-gradient(to bottom, #637aad 5%, #5972a7 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#637aad', endColorstr='#5972a7',GradientType=0);
+  background-color: #637aad;
+  border: 1px solid #314179;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+.link-item button:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5972a7), color-stop(1, #637aad));
+  background: -moz-linear-gradient(top, #5972a7 5%, #637aad 100%);
+  background: -webkit-linear-gradient(top, #5972a7 5%, #637aad 100%);
+  background: -o-linear-gradient(top, #5972a7 5%, #637aad 100%);
+  background: -ms-linear-gradient(top, #5972a7 5%, #637aad 100%);
+  background: linear-gradient(to bottom, #5972a7 5%, #637aad 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5972a7', endColorstr='#637aad',GradientType=0);
+  background-color: #5972a7;
+}
+
+.link-item button:active {
+  position: relative;
+  top: 1px;
+}
+
+.link-item button:disabled,
+.myButton:disabled {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e1e1e1+44,e1e1e1+44,f6f6f6+81,f6f6f6+81 */
+  background: rgb(255,255,255);
+  /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(225,225,225,1) 44%, rgba(225,225,225,1) 44%, rgba(246,246,246,1) 81%, rgba(246,246,246,1) 81%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(225,225,225,1) 44%,rgba(225,225,225,1) 44%,rgba(246,246,246,1) 81%,rgba(246,246,246,1) 81%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(225,225,225,1) 44%,rgba(225,225,225,1) 44%,rgba(246,246,246,1) 81%,rgba(246,246,246,1) 81%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 );
+  /* IE6-9 */
+  color: darkgray;
+  border: 1px solid rgba(225,225,225,1);
+  cursor: not-allowed;
+  -moz-box-shadow: inset 0 1px 0 0 transparent;
+  -webkit-box-shadow: inset 0 1px 0 0 transparent;
+  box-shadow: inset 0 1px 0 0 transparent;
+}
