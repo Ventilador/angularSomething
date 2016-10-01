@@ -1,25 +1,25 @@
 function ejemplo($rootScope) {
     var isolated = $rootScope.$new(true);
     var nonIsolated = $rootScope.$new();
-    log(comment('los scopes son distintos'));
+    // los scopes son distintos
     log('isolated === nonIsolated => ', isolated === nonIsolated);
     newLine();
-    log(comment('pero los parent no'));
+    // pero los parent no
     log('isolated.$parent === nonIsolated.$parent => ', isolated.$parent === nonIsolated.$parent);
 
     var nonIsolated2 = $rootScope.$new();
     var isolated2 = nonIsolated2.$new(true);
 
     newLine();
-    log(comment('dos non-isolated comparten prototypo (si son hijos del mismo scope)'));
+    // dos non-isolated comparten prototypo (si son hijos del mismo scope)
     log('nonIsolated.$prototype === nonIsolated2.$prototype => ', nonIsolated.$prototype === nonIsolated2.$prototype);
 
     newLine();
-    log(comment('dos isolated comparten prototypo (sin importar el padre)'));
+    // dos isolated comparten prototypo (sin importar el padre)
     log('isolated.$prototype === isolated2.$prototype => ', isolated.$prototype === isolated2.$prototype);
 
     newLine();
-    log(comment('pero un isolated y un non-isolated no lo comparten, sin importar los padres'));
+    // pero un isolated y un non-isolated no lo comparten, sin importar los padres
     log('nonIsolated.$prototype === isolated.$prototype => ', nonIsolated.$prototype === isolated.$prototype);
 }
 

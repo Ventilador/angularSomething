@@ -1,0 +1,89 @@
+[
+    {
+        "type": "ExpressionStatement",
+        "expression": {
+            "type": "AssignmentExpression",
+            "left": {
+                "type": "MemberExpression",
+                "object": {
+                    "type": "MemberExpression",
+                    "object": {
+                        "type": "Identifier",
+                        "name": "property"
+                    },
+                    "property": {
+                        "type": "BinaryExpression",
+                        "operator": "+",
+                        "left": {
+                            "type": "Literal",
+                            "value": "prop"
+                        },
+                        "right": {
+                            "type": "Literal",
+                            "value": 0
+                        }
+                    },
+                    "computed": true
+                },
+                "property": {
+                    "type": "BinaryExpression",
+                    "operator": "-",
+                    "left": {
+                        "type": "MemberExpression",
+                        "object": {
+                            "type": "MemberExpression",
+                            "object": {
+                                "type": "Identifier",
+                                "name": "property"
+                            },
+                            "property": {
+                                "type": "BinaryExpression",
+                                "operator": "+",
+                                "left": {
+                                    "type": "Literal",
+                                    "value": "prop"
+                                },
+                                "right": {
+                                    "type": "Literal",
+                                    "value": 0
+                                }
+                            },
+                            "computed": true
+                        },
+                        "property": {
+                            "type": "Identifier",
+                            "name": "length"
+                        },
+                        "computed": false
+                    },
+                    "right": {
+                        "type": "Literal",
+                        "value": 1
+                    }
+                },
+                "computed": true
+            },
+            "right": {
+                "type": "LogicalExpression",
+                "operator": "||",
+                "left": {
+                    "type": "Identifier",
+                    "name": "anotherProp"
+                },
+                "right": {
+                    "type": "AssignmentExpression",
+                    "left": {
+                        "type": "Identifier",
+                        "name": "anotherProp"
+                    },
+                    "right": {
+                        "type": "Identifier",
+                        "name": "localsProp"
+                    },
+                    "operator": "="
+                }
+            },
+            "operator": "="
+        }
+    }
+]

@@ -1,9 +1,9 @@
 function ejemplo() {
     function decorator(fn) {
         return function () {
-            log(comment('antes de la llamada'));
+            // antes de la llamada 
             fn.apply(this, arguments);
-            log(comment('despues de la llamada'));
+            // despues de la llamada 
         };
     }
     var unObjeto = Object.create({

@@ -11,25 +11,25 @@ function ejemplo($rootScope) {
     }
 
     newLine();
-    log(comment('el prototype del isolated es igual al del root'));
+    // el prototype del isolated es igual al del root
     log('isolated.prototype === $rootScope.prototype => ', isolatedProto === rootProto);
 
     newLine();
-    log(comment('en cambio el non-isolated tiene de prototype al padre(en este caso el $rootScope)'));
+    // en cambio el non-isolated tiene de prototype al padre(en este caso el $rootScope)
     log('nonIsolated.prototype === $rootScope.prototype => ', nonIsolatedProto === rootProto);
     log('nonIsolated.prototype === $rootScope => ', nonIsolatedProto === $rootScope);
 
     newLine();
-    log(comment('el isolated no comparte nada del padre, solo el prototype'));
+    // el isolated no comparte nada del padre, solo el prototype
     $rootScope.prop = 'ola ke ase';
     log(isolated.prop, comment('por eso es undefined'));
 
     newLine();
-    log(comment('el non-isolated en cambio, hereda las propiedades del padre'));
+    // el non-isolated en cambio, hereda las propiedades del padre
     log(nonIsolated.prop, 'todo bien Bo?');
 
     newLine();
-    log(comment('aunque no es propiedad suya'));
+    // aunque no es propiedad suya
     log("nonIsolated.hasOwnProperty('prop') => ", nonIsolated.hasOwnProperty('prop'));
     log("nonIsolated.prototype.hasOwnProperty('prop') => ", nonIsolatedProto.hasOwnProperty('prop'));
 } 

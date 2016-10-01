@@ -26,9 +26,9 @@ function ejemplo() {
     );
     walterTraeFacturas(log, 'Mira ', 'que', ' pro');
     newLine();
-    log(comment('tambien puede retornar cosas, en este caso si no tiene argumentos'));
+    // tambien puede retornar cosas, en este caso si no tiene argumentos
     log(walterTraeFacturas());
     newLine();
-    log(comment('ademas, obviamente se puede usar call (y apply)'));
+    // ademas, obviamente se puede usar call (y apply)
     walterTraeFacturas.call(context, log, param1, param2, param3);
 }

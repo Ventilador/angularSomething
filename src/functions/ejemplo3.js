@@ -3,13 +3,13 @@ function ejemplo() {
     var noPrototype = Object.create(null);
     noPrototype.prop = 'myProp';
     try {
-        log(comment('esto falla, porque el prototipo del objecto es null'));
+        // esto falla, porque el prototipo del objecto es null
         log(noPrototype.hasOwnProperty('prop'));
     } catch (err) {
         log(err);
-        log(comment('si sos de los "ver para creer", aca tenes wachin'));
+        // si sos de los "ver para creer", aca tenes wachin
         log('noPrototype.prototype = ', noPrototype.prototype || noPrototype.__proto__);
-        log(comment('igual te quiero :-*'));
+        // igual te quiero :-*
     }
     newLine();
     log("sinBindear.call(noPrototype, 'prop') === ",

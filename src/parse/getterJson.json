@@ -1,0 +1,33 @@
+[
+    {
+        "type": "ExpressionStatement",
+        "expression": {
+            "type": "AssignmentExpression",
+            "left": {
+                "type": "MemberExpression",
+                "object": {
+                    "type": "MemberExpression",
+                    "object": {
+                        "type": "Identifier",
+                        "name": "first"
+                    },
+                    "property": {
+                        "type": "Identifier",
+                        "name": "second"
+                    },
+                    "computed": false
+                },
+                "property": {
+                    "type": "Identifier",
+                    "name": "third"
+                },
+                "computed": false
+            },
+            "right": {
+                "type": "Literal",
+                "value": 0
+            },
+            "operator": "="
+        }
+    }
+]

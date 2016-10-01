@@ -4,7 +4,6 @@ body pre.prettyprint {
 
 body pre.prettyprint,
 #log {
-  display: flex;
   flex-basis: 47%;
   padding: 10px;
   border-radius: 10px;
@@ -48,6 +47,14 @@ comment {
   color: #607D31;
   font-style: italic;
   width: 100vw;
+}
+
+span.com {
+  border: 1px solid green;
+}
+
+span.str {
+  color: rgb(206, 145,105);
 }
 
 .state {

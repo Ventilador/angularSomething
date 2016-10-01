@@ -42,13 +42,14 @@ function appendJS(ejemploNumero) {
             '// ' + url + ' ejemplo #' + ejemploNumero,
             window.ejemplo.toString()
         ].join('\r\n');
+        document.getElementById('content').classList.remove('prettyprinted');
         PR.prettyPrint();
     }, 100);
 }
 var elem;
 var footer = document.getElementById('footer');
 var botones = document.getElementById('botones');
-var topics = ['prototypes', 'functions', 'scopes'];
+var topics = ['prototypes', 'functions', 'scopes', 'parse'];
 
 var makeButtons = function (getter, numberOfButtons) {
     var toReturn = [];
@@ -70,6 +71,9 @@ var makeBotones = {
     },
     scopes: function () {
         return makeButtons(3).join('');
+    },
+    parse: function () {
+        return makeButtons(10).join('');
     }
 }
 function makeFooter() {
@@ -112,6 +116,14 @@ function log() {
         }
         return item;
     }).join(''), '</p>'].join(' ');
+}
+
+function prettyLog(text) {
+    text = js_beautify(text);
+    elem.innerHTML += text;
+    elem.classList.remove('prettyprinted')
+    elem.classList.add('prettyprint')
+    PR.prettyPrint();
 }
 
 function noop() { };
@@ -162,6 +174,6 @@ function getString(url) {
     return request.responseText;
 }
 
-function comment(content) {
-    return ['  <comment>// ', content, '</comment>'].join('');
+function comment() {
+    return ['  <comment>// ', Array.prototype.join.call(arguments, ''), '</comment>'].join('');
 }
