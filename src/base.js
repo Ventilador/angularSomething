@@ -49,7 +49,7 @@ function appendJS(ejemploNumero) {
 var elem;
 var footer = document.getElementById('footer');
 var botones = document.getElementById('botones');
-var topics = ['prototypes', 'functions', 'scopes', 'parse'];
+var topics = ['prototypes', 'functions', 'scopes', 'parse', 'component-vs-directive', 'watchers'];
 
 var makeButtons = function (getter, numberOfButtons) {
     var toReturn = [];
@@ -74,6 +74,12 @@ var makeBotones = {
     },
     parse: function () {
         return makeButtons(10).join('');
+    },
+    'component-vs-directive': function () {
+        return makeButtons(3).join('');
+    },
+    watchers: function () {
+        return makeButtons(5).join('');
     }
 }
 function makeFooter() {

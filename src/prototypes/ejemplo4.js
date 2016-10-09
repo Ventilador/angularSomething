@@ -1,4 +1,4 @@
-window.ejemplo = function () {
+function ejemplo() {
     var constructor = function (val) {
         this.prop = val;
     }

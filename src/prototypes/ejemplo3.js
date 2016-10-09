@@ -1,4 +1,4 @@
-window.ejemplo = function () {
+function ejemplo () {
     var parent = {
         myFunction: function () {
             return this.prop;
