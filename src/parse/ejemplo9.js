@@ -12,4 +12,5 @@ function ejemplo($parse, aScope) {
     }
     log('aScope.property.prop0[aScope.property.prop0.length - 1] === noop => ',
         aScope.property.prop0[aScope.property.prop0.length - 1] === angular.noop);
+    log('aScope.anotherProp === noop => ', aScope.anotherProp === angular.noop);
 }

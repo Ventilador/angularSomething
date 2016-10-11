@@ -36,12 +36,11 @@ function changeTo(ejemploNumero, currentElement) {
 }
 
 
-function appendJS(ejemploNumero) {
+
+
+function appendJS(ejemploNumero, getter) {
     setTimeout(function () {
-        document.getElementById('content').textContent = [
-            '// ' + url + ' ejemplo #' + ejemploNumero,
-            window.ejemplo.toString()
-        ].join('\r\n');
+        document.getElementById('content').textContent = window.ejemplo.toString();
         document.getElementById('content').classList.remove('prettyprinted');
         PR.prettyPrint();
     }, 100);
@@ -49,7 +48,7 @@ function appendJS(ejemploNumero) {
 var elem;
 var footer = document.getElementById('footer');
 var botones = document.getElementById('botones');
-var topics = ['prototypes', 'functions', 'scopes', 'parse', 'component-vs-directive', 'watchers'];
+var topics = ['prototypes', 'functions', 'scopes', 'parse', 'component-vs-directive', 'watchers', 'bindings'];
 
 var makeButtons = function (getter, numberOfButtons) {
     var toReturn = [];
@@ -59,27 +58,31 @@ var makeButtons = function (getter, numberOfButtons) {
         }
     }
     return toReturn;
-}.bind(undefined, function (currentNumber) {
+};
+function defaultGetter(currentNumber) {
     return 'Ejemplo #' + currentNumber;
-});
+}
 var makeBotones = {
     prototypes: function () {
-        return makeButtons(5).join('');
+        return makeButtons(prototypesGetter, 5).join('');
     },
     functions: function () {
-        return this.prototypes();
+        return makeButtons(functionsGetter, 5).join('');
     },
     scopes: function () {
-        return makeButtons(3).join('');
+        return makeButtons(scopesGetter, 3).join('');
     },
     parse: function () {
-        return makeButtons(10).join('');
+        return makeButtons(parseGetter, 9).join('');
     },
     'component-vs-directive': function () {
-        return makeButtons(3).join('');
+        return makeButtons(componentVsDirectiveGetter, 3).join('');
     },
     watchers: function () {
-        return makeButtons(5).join('');
+        return makeButtons(watchersGetter, 5).join('');
+    },
+    bindings: function () {
+        return makeButtons(bindingsGetter, 5).join('');
     }
 }
 function makeFooter() {
@@ -97,7 +100,15 @@ function makeFooter() {
 }
 var doneFooter;
 var doneBotones = !makeBotones[url];
+var done;
 document.onreadystatechange = function () {
+    done || (function (dom) {
+        var script = document.createElement('script');
+        script.classList.add('no');
+        script.src = 'src/getters.js';
+        document.head.appendChild(script);
+        done = true;
+    })();
     elem = document.getElementById('log');
     if (!doneFooter && (footer = document.getElementById('footer'))) {
         footer.innerHTML = makeFooter();

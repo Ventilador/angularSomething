@@ -42,6 +42,7 @@ function ejemplo() {
     newLine();
     log(destroyChild);
 }
+ejemplo();
 
 var createChildScopeClass = `function createChildScopeClass(parent) {
     function ChildScope() {

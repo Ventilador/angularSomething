@@ -4,7 +4,6 @@ function ejemplo () {
             return this.prop;
         }
     }
-    // asdasdasdasd
     var child = Object.create(parent);
     child.prop = 'myProp';
     log('child.myFunction()= "', child.myFunction(), '"', comment('prop derecho'));

@@ -12,15 +12,15 @@ function ejemplo($rootScope) {
 
     newLine();
     // dos non-isolated comparten prototypo (si son hijos del mismo scope)
-    log('nonIsolated.$prototype === nonIsolated2.$prototype => ', nonIsolated.$prototype === nonIsolated2.$prototype);
+    log('nonIsolated.prototype === nonIsolated2.prototype => ', nonIsolated.prototype === nonIsolated2.prototype);
 
     newLine();
     // dos isolated comparten prototypo (sin importar el padre)
-    log('isolated.$prototype === isolated2.$prototype => ', isolated.$prototype === isolated2.$prototype);
+    log('isolated.prototype === isolated2.prototype => ', isolated.prototype === isolated2.prototype);
 
     newLine();
     // pero un isolated y un non-isolated no lo comparten, sin importar los padres
-    log('nonIsolated.$prototype === isolated.$prototype => ', nonIsolated.$prototype === isolated.$prototype);
+    log('nonIsolated.prototype === isolated.prototype => ', nonIsolated.prototype === isolated.prototype);
 }
 
 

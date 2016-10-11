@@ -1,24 +1,22 @@
 function ejemplo() {
-    var constructor = function (val) {
+    var Constructor = function (val) {
         this.prop = val;
     }
-    constructor.prototype = {
-        setProp: function (newValue) {
-            this.prop = newValue;
-        },
+    Constructor.prototype = {
         setProp2: function (newValue) {
             this.prop2 = newValue;
         },
         print: function () {
             log(this.prop);
         },
-        print2: function () {
+        printProp2: function () {
             log(this.prop2);
         }
     }
-    var instance = new constructor('propiedad del constructor');
+    var instance = new Constructor('propiedad del Constructor');
     instance.print();
     newLine();
     instance.setProp2('agregado desde el prototype');
-    instance.print2();
+    log('instance.prop2 === instance.printProp2() => ' + instance.prop2 === instance.printProp2());
+
 }

@@ -1,15 +1,12 @@
 function ejemplo() {
-    var constructor = function () {
-
-    }
-    constructor.prototype = {
+    var Constructor = function () { }
+    Constructor.prototype = {
         newArray: function () {
             this.myArray = [];
             for (var ii = 0; ii < 10000; ii++) {
                 this.myArray.push(Math.floor(Math.random() * 10000));
             }
         },
-
         filterCount: function () {
             var count = 0;
             for (var ii = 0; ii < this.myArray.length; ii++) {
@@ -33,41 +30,41 @@ function ejemplo() {
             })();
         }
     }
-    var instance = new constructor();
+    var instance = new Constructor();
     instance.newArray();
     time('filterCount');
-    log(instance.filterCount());
+    instance.filterCount();
     timeEnd('filterCount');
     time('filterCount');
-    log(instance.filterCount());
+    instance.filterCount();
     timeEnd('filterCount');
     time('filterCount');
-    log(instance.filterCount());
+    instance.filterCount();
     timeEnd('filterCount');
     instance.newArrayLazy();
     time('lazyFilter');
-    log(instance.lazyFilter());
+    instance.lazyFilter();
     timeEnd('lazyFilter');
     time('lazyFilter');
-    log(instance.lazyFilter());
+    instance.lazyFilter();
     timeEnd('lazyFilter');
     time('lazyFilter');
-    log(instance.lazyFilter());
+    instance.lazyFilter();
     timeEnd('lazyFilter');
     time('lazyFilter');
-    log(instance.lazyFilter());
+    instance.lazyFilter();
     timeEnd('lazyFilter');
     instance.newArrayLazy();
     time('lazyFilter');
-    log(instance.lazyFilter());
+    instance.lazyFilter();
     timeEnd('lazyFilter');
     time('lazyFilter');
-    log(instance.lazyFilter());
+    instance.lazyFilter();
     timeEnd('lazyFilter');
     time('lazyFilter');
-    log(instance.lazyFilter());
+    instance.lazyFilter();
     timeEnd('lazyFilter');
     time('lazyFilter');
-    log(instance.lazyFilter());
+    instance.lazyFilter();
     timeEnd('lazyFilter');
 }

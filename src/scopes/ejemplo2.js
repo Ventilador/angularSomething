@@ -26,7 +26,7 @@ function ejemplo($rootScope) {
 
     newLine();
     // el non-isolated en cambio, hereda las propiedades del padre
-    log(nonIsolated.prop, 'todo bien Bo?');
+    log(nonIsolated.prop, 'todo bien y Bo?');
 
     newLine();
     // aunque no es propiedad suya

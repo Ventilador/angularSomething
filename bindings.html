@@ -1,0 +1,43 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+	<script class="no" src="src/base.js" type="text/javascript"></script>
+	<script class="no" src="src/bindings/base.js" type="text/javascript"></script>
+	<script class="no" src="externos/prittyprint.js" type="text/javascript"></script>
+	<script class="no" src="externos/angular.js" type="text/javascript"></script>
+	<script class="no" src="externos/beautifier.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="externos/styles.css"></link>
+	<link rel="stylesheet" type="text/css" href="externos/botones.css"></link>
+	<style>
+		.prettyprint,
+		.content .myButton {
+			display: none;
+		}
+		
+		#log {
+			min-width: 55%;
+			margin: auto;
+			display: block !important;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="botones">
+	</div>
+	<div class="estado">
+		<span id="state" class="state">state: idle</span>
+	</div>
+	<div class="botones tests">
+		<button class="myButton" onclick="location = 'testsRandom.html'">Tests random</button>
+	</div>
+	<div class="content">
+		<pre class="prettyprint" id="content"></pre>
+		<button class="myButton" onclick="run()">Run</button>
+		<pre id="log"></pre>
+	</div>
+	<div class="footer" id="footer"></div>
+</body>
+
+</html>
